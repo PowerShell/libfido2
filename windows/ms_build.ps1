@@ -52,11 +52,11 @@ if (-Not (Test-Path $CMake)) {
 }
 
 # Override CMAKE_SYSTEM_VERSION if $WinSDK is set.
-if (-Not ([string]::IsNullOrEmpty($WinSDK))) {
+<#if (-Not ([string]::IsNullOrEmpty($WinSDK))) {
 	$CMAKE_SYSTEM_VERSION = "-DCMAKE_SYSTEM_VERSION='$WinSDK'"
 } else {
 	$CMAKE_SYSTEM_VERSION = ''
-}
+}#>
 
 Write-Host "WinSDK: $WinSDK"
 Write-Host "Config: $Config"
@@ -102,7 +102,7 @@ try {
 	    -DBUILD_SHARED_LIBS="${SHARED}" `
 	    -DCMAKE_C_FLAGS_DEBUG="${CFLAGS_DEBUG}" `
 	    -DCMAKE_C_FLAGS_RELEASE="${CFLAGS_RELEASE}" `
-	    -DCMAKE_INSTALL_PREFIX="${PREFIX}" "${CMAKE_SYSTEM_VERSION}"; `
+	    -DCMAKE_INSTALL_PREFIX="${PREFIX}"; `
 	    ExitOnError
 	& $CMake --build . --config ${Config} --verbose; ExitOnError
 	& $CMake --build . --config ${Config} --target install --verbose; `
@@ -132,7 +132,7 @@ try {
 	    -DCRYPTO_BIN_DIRS="${PREFIX}\bin" `
 	    -DCMAKE_C_FLAGS_DEBUG="${CFLAGS_DEBUG} ${Fido2Flags}" `
 	    -DCMAKE_C_FLAGS_RELEASE="${CFLAGS_RELEASE} ${Fido2Flags}" `
-	    -DCMAKE_INSTALL_PREFIX="${PREFIX}" "${CMAKE_SYSTEM_VERSION}"; `
+	    -DCMAKE_INSTALL_PREFIX="${PREFIX}"; `
 	    ExitOnError
 	& $CMake --build . --config ${Config} --verbose; ExitOnError
 	& $CMake --build . --config ${Config} --target install --verbose; `

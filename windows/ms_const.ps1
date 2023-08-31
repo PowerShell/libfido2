@@ -3,8 +3,8 @@
 # license that can be found in the LICENSE file.
 
 # LibreSSL coordinates.
-New-Variable -Name 'LIBRESSL' -Value 'libressl-3.7.2' -Option Constant
-New-Variable -Name 'LIBRESSL_BIN_URL' -Value 'https://github.com/PowerShell/LibreSSL/releases/download/V3.7.2.0/LibreSSL.zip' -Option Constant
+New-Variable -Name 'LIBRESSL' -Value 'libressl-3.7.3' -Option Constant
+New-Variable -Name 'LIBRESSL_BIN_URL' -Value 'https://github.com/PowerShell/LibreSSL/releases/download/V3.7.3.0/LibreSSL.zip' -Option Constant
 New-Variable -Name 'CRYPTO_LIBRARIES' -Value 'crypto-50' -Option Constant
 
 # libcbor coordinates.
@@ -15,8 +15,8 @@ New-Variable -Name 'LIBCBOR_GIT' -Value 'https://github.com/PowerShell/libcbor' 
 
 # zlib coordinates.
 New-Variable -Name 'ZLIB' -Value 'zlib' -Option Constant
-New-Variable -Name 'ZLIB_BRANCH' -Value 'v1.2.13' -Option Constant
-New-Variable -Name 'ZLIB_BIN_URL' -Value 'https://github.com/PowerShell/ZLib/releases/download/V1.2.13/ZLib.zip' -Option Constant
+New-Variable -Name 'ZLIB_BRANCH' -Value 'v1.3' -Option Constant
+New-Variable -Name 'ZLIB_BIN_URL' -Value 'https://github.com/PowerShell/ZLib/releases/download/V1.3/ZLib.zip' -Option Constant
 
 # Work directories.
 New-Variable -Name 'BUILD' -Value "$PSScriptRoot\..\build" -Option Constant

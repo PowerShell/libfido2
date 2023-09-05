@@ -66,9 +66,9 @@ Function Package-PDBs(${SRC}, ${DEST}) {
 }
 
 Function Package-StaticPDBs(${SRC}, ${DEST}) {
-	Copy-Item "${SRC}\libcbor\src\cbor.dir\Release\cbor.pdb" `
+	Copy-Item "${SRC}\libcbor\src\Release\cbor.pdb" `
 	    "${DEST}\cbor.pdb"
-	Copy-Item "${SRC}\src\fido2.dir\Release\fido2.pdb" `
+	Copy-Item "${SRC}\src\Release\fido2_static.pdb" `
 	    "${DEST}\fido2.pdb"
 }
 

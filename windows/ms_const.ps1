@@ -3,8 +3,8 @@
 # license that can be found in the LICENSE file.
 
 # LibreSSL coordinates.
-New-Variable -Name 'LIBRESSL' -Value 'libressl-3.7.3' -Option Constant
-New-Variable -Name 'LIBRESSL_BIN_URL' -Value 'https://github.com/PowerShell/LibreSSL/releases/download/V3.7.3.0/LibreSSL.zip' -Option Constant
+New-Variable -Name 'LIBRESSL' -Value 'libressl-3.8.2' -Option Constant
+New-Variable -Name 'LIBRESSL_BIN_URL' -Value 'https://github.com/PowerShell/LibreSSL/releases/download/V3.8.2.0/LibreSSL.zip' -Option Constant
 New-Variable -Name 'CRYPTO_LIBRARIES' -Value 'crypto-50' -Option Constant
 
 # libcbor coordinates.
